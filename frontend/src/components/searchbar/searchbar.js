@@ -1,61 +1,72 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "./searchbar.css";
-import SearchIcon from "@material-ui/icons/Search";
-import CloseIcon from "@material-ui/icons/Close";
+import axios from "axios";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
 
-function SearchBar({ placeholder, data }) {
-  const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
+const SearchBar = () => {
+  const [cocktails, setCocktails] = useState([]);
+  const [value, setValue] = useState("");
 
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
-    });
+  const onChange = (event) => {
+    setValue(event.target.value);
+  };
 
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
+  const onSearch = (searchTerm) => {
+    setValue(searchTerm);
+    console.log("search ", searchTerm);
   };
 
   const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
+    setValue("");
   };
 
+  useEffect(() => {
+    async function fetchCocktails() {
+      // You can await here
+      const cocktails = await axios.get(`http://localhost:5000/cocktails/`);
+      setCocktails(cocktails.data);
+    }
+    fetchCocktails();
+  }, []);
+
   return (
-    <div className="search">
-      <div className="searchInputs">
-        <input
-          type="text"
-          placeholder={placeholder}
-          value={wordEntered}
-          onChange={handleFilter}
-        />
-        <div className="searchIcon">
-          {filteredData.length === 0 ? (
-            <SearchIcon />
-          ) : (
-            <CloseIcon id="clearBtn" onClick={clearInput} />
-          )}
+    <div>
+      <h1>Search Cocktails</h1>
+
+      <div className="search-container">
+        <div className="search-inner">
+          <input type="text" value={value} onChange={onChange} />
+          <SearchIcon onClick={() => onSearch(value)} />
+          <CloseIcon id="clearBtn" onClick={clearInput} />
+        </div>
+
+        <div className="dropdown">
+          {cocktails
+            .filter((item) => {
+              const searchTerm = value.toLowerCase();
+              const strDrink = item.strDrink.toLowerCase();
+
+              return (
+                searchTerm &&
+                strDrink.startsWith(searchTerm) &&
+                strDrink !== searchTerm
+              );
+            })
+            .slice(0, 10)
+            .map((item) => (
+              <div
+                onClick={() => onSearch(item.strDrink)}
+                className="dropdown-row"
+                key={item.strDrink}
+              >
+                {item.strDrink}
+              </div>
+            ))}
         </div>
       </div>
-      {filteredData.length != 0 && (
-        <div className="dataResult">
-          {filteredData.slice(0, 15).map((value, key) => {
-            return (
-              <a className="dataItem" href={value.link} target="_blank">
-                <p>{value.title} </p>
-              </a>
-            );
-          })}
-        </div>
-      )}
     </div>
   );
-}
+};
 
 export default SearchBar;

@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 // import components
-import SearchBar from "./components/searchbar/searchbar2";
+import SearchBar from "./components/searchbar/searchbar";
 
 function App() {
   return (
