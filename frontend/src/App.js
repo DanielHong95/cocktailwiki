@@ -1,17 +1,15 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./App.css";
 
 // import components
-import SearchBar from "./components/searchbar/searchbar";
+import SearchBar from "./components/searchbar/searchbar2";
 
 function App() {
   return (
-    <Fragment>
-      <div className="container">
-        <header>The Cocktail Database</header>
-        <SearchBar placeholder="Enter a Cocktail Name..." />
-      </div>
-    </Fragment>
+    <div className="container">
+      <header>The Cocktail Database</header>
+      <SearchBar placeholder="Enter a Cocktail Name..." />
+    </div>
   );
 }
 
