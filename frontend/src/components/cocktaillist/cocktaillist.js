@@ -30,7 +30,7 @@ const List = () => {
       {cocktails.length ? (
         cocktails.map((cocktails, index) => (
           <div key={cocktails.idDrink}>
-            <p onClick={printid}>
+            <p onClick={routePage}>
               {index + 1}. {cocktails.strDrink}
             </p>
           </div>
