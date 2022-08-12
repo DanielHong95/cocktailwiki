@@ -3,7 +3,11 @@ import React from "react";
 function Spirits() {
   return (
     <div>
-      <li>Bourbon</li>
+      <button>Bourbon</button>
+      <button>Tequila</button>
+      <button>Vodka</button>
+      <button>Gin</button>
+      <button>Rum</button>
     </div>
   );
 }

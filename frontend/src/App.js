@@ -6,14 +6,17 @@ import "./App.css";
 import HomePage from "./pages/homepage/homepage";
 import SpiritsPage from "./pages/spiritspage/spiritspage";
 import CocktailListPage from "./pages/cocktaillistpage/cocktaillistpage";
+import DrinkPage from "./pages/drinkpage/drinkpage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/homepage" element={<HomePage />} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/homepage" element={<HomePage />} />
         <Route path="/spirits" element={<SpiritsPage />} />
         <Route path="/cocktaillist" element={<CocktailListPage />} />
+        <Route path="/drinkpage" element={<DrinkPage />} />
       </Routes>
     </BrowserRouter>
   );
