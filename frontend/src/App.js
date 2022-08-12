@@ -16,7 +16,7 @@ function App() {
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/spirits" element={<SpiritsPage />} />
         <Route path="/cocktaillist" element={<CocktailListPage />} />
-        <Route path="/drinkpage" element={<DrinkPage />} />
+        <Route path="/drinkpage/:idDrink" element={<DrinkPage />} />
       </Routes>
     </BrowserRouter>
   );
