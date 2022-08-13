@@ -7,8 +7,8 @@ const List = () => {
   const [cocktails, setCocktails] = useState([]);
 
   const navigate = useNavigate();
-  const routePage = () => {
-    let path = "/drinkpage";
+  const routePage = (idDrink) => {
+    let path = `/drinkpage/${idDrink}`;
     navigate(path);
   };
 
@@ -21,20 +21,18 @@ const List = () => {
     fetchCocktails();
   }, []);
 
-  const printid = () => {
-    console.log(cocktails);
-  };
-
   return (
     <div>
       {cocktails.length ? (
-        cocktails.map((cocktails, index) => (
-          <div key={cocktails.idDrink}>
-            <p onClick={routePage}>
-              {index + 1}. {cocktails.strDrink}
-            </p>
-          </div>
-        ))
+        cocktails.map((cocktail, index) => {
+          return (
+            <div key={cocktail.idDrinK}>
+              <p onClick={() => routePage(cocktail.idDrinK)}>
+                {index + 1}. {cocktail.strDrink}
+              </p>
+            </div>
+          );
+        })
       ) : (
         <p></p>
       )}

@@ -25,7 +25,7 @@ app.get("/cocktails/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const cocktails = await pool.query(
-      "SELECT * FROM cocktails WHERE idDrinK = $1",
+      'SELECT * FROM cocktails WHERE "idDrinK" = $1',
       [id]
     );
 
