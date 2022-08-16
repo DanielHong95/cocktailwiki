@@ -7,6 +7,7 @@ import HomePage from "./pages/homepage/homepage";
 import SpiritsPage from "./pages/spiritspage/spiritspage";
 import CocktailListPage from "./pages/cocktaillistpage/cocktaillistpage";
 import DrinkPage from "./pages/drinkpage/drinkpage";
+import SearchPage from "./pages/searchpage/searchpage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/spirits" element={<SpiritsPage />} />
         <Route path="/cocktaillist" element={<CocktailListPage />} />
         <Route path="/drinkpage/:idDrink" element={<DrinkPage />} />
+        <Route path="/searchpage" element={<SearchPage />} />
       </Routes>
     </BrowserRouter>
   );

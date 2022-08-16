@@ -21,7 +21,7 @@ function NavBar() {
             <Nav.Link href="/homepage">Home</Nav.Link>
             <Nav.Link href="/spirits">Spirits</Nav.Link>
             <Nav.Link href="/cocktaillist">Cocktails List</Nav.Link>
-            <Nav.Link href="/drinkpage">Drink Page</Nav.Link>
+            <Nav.Link href="/searchpage">Search by Ingredient</Nav.Link>
             <NavDropdown title="Pages" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Cocktail List</NavDropdown.Item>
               <NavDropdown.Item href="#action4">

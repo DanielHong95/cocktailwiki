@@ -4,7 +4,7 @@ import axios from "axios";
 
 // import components
 import NavBar from "../../components/navbar/navbar";
-import DrinkImage from "../../components/drinkimage/drinkimage";
+import DrinkInfo from "../../components/drinkinfo/drinkinfo";
 
 function DrinkPage(props) {
   const { idDrink } = useParams();
@@ -18,19 +18,25 @@ function DrinkPage(props) {
       setCocktailInfo(cocktail.data);
     }
     fetchCocktailById();
-  });
+  }, [idDrink]);
 
-  if (cocktailInfo == undefined) {
+  if (cocktailInfo === undefined) {
     return <p>loading...</p>;
   }
   return (
     <div className="container">
       <NavBar />
-      <header>Old Fasioned</header>
       <p></p>
-      <DrinkImage
+      <DrinkInfo
         idDrink={idDrink}
-        cocktailImage={cocktailInfo.strDrinkThumb}
+        drinkHeader={cocktailInfo.strDrink}
+        drinkImage={cocktailInfo.strDrinkThumb}
+        drinkInstructions={cocktailInfo.strInstructions}
+        drinkIngredient1={cocktailInfo.strIngredient1}
+        drinkIngredient2={cocktailInfo.strIngredient2}
+        drinkIngredient3={cocktailInfo.strIngredient3}
+        drinkIngredient4={cocktailInfo.strIngredient5}
+        drinkIngredient5={cocktailInfo.strIngredient5}
       />
     </div>
   );

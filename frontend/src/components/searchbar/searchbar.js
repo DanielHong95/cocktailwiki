@@ -3,6 +3,7 @@ import "./searchbar.css";
 import axios from "axios";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
   const [cocktails, setCocktails] = useState([]);
@@ -12,9 +13,12 @@ const SearchBar = () => {
     setValue(event.target.value);
   };
 
-  const onSearch = (searchTerm) => {
-    setValue(searchTerm);
-    console.log("search ", searchTerm);
+  const navigate = useNavigate();
+  const onSearch = (idDrink) => {
+    let path = `/drinkpage/${idDrink}`;
+    navigate(path);
+    setValue(idDrink);
+    console.log("search ", idDrink);
   };
 
   const clearInput = () => {
@@ -36,8 +40,13 @@ const SearchBar = () => {
 
       <div className="search-container">
         <div className="search-inner">
-          <input type="text" value={value} onChange={onChange} />
-          <SearchIcon onClick={() => onSearch(value)} />
+          <input
+            type="text"
+            value={value}
+            onChange={onChange}
+            key={cocktails.idDrinK}
+          />
+          <SearchIcon onClick={() => onSearch(cocktails.idDrinK)} />
           <CloseIcon id="clearBtn" onClick={clearInput} />
         </div>
 
@@ -56,7 +65,7 @@ const SearchBar = () => {
             .slice(0, 10)
             .map((item) => (
               <div
-                onClick={() => onSearch(item.strDrink)}
+                onClick={() => onSearch(item.idDrinK)}
                 className="dropdown-row"
                 key={item.strDrink}
               >
