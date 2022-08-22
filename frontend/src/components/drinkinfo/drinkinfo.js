@@ -1,4 +1,4 @@
-const DrinkInfo = (props) => {
+function DrinkInfo(props) {
   return (
     <div key={props.idDrink}>
       <h1>{props.drinkHeader}</h1>
@@ -11,6 +11,6 @@ const DrinkInfo = (props) => {
       <div>{props.drinkIngredient5}</div>
     </div>
   );
-};
+}
 
 export default DrinkInfo;

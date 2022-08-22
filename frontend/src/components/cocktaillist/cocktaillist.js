@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./cocktaillist.css";
 import axios from "axios";
 
-const List = () => {
+function List() {
   const [cocktails, setCocktails] = useState([]);
 
   const navigate = useNavigate();
@@ -38,6 +38,6 @@ const List = () => {
       )}
     </div>
   );
-};
+}
 
 export default List;

@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <div className="container">
       <NavBar />
-      <header>The Cocktail Wiki</header>
+      <h1>The Cocktail Wiki</h1>
       <SearchBar placeholder="Enter a Cocktail Name..." />
     </div>
   );

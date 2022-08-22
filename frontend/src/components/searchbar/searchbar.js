@@ -36,7 +36,7 @@ const SearchBar = () => {
 
   return (
     <div>
-      <h1>Search Cocktails</h1>
+      <header>Search Cocktails</header>
 
       <div className="search-container">
         <div className="search-inner">

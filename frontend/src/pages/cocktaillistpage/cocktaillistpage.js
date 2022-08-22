@@ -4,7 +4,7 @@ import React from "react";
 import NavBar from "../../components/navbar/navbar";
 import List from "../../components/cocktaillist/cocktaillist";
 
-function SpiritsPage() {
+function CocktailListPage() {
   return (
     <div className="container">
       <NavBar />
@@ -14,4 +14,4 @@ function SpiritsPage() {
   );
 }
 
-export default SpiritsPage;
+export default CocktailListPage;
