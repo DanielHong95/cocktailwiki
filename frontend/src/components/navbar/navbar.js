@@ -3,8 +3,9 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import SeachBar from "../searchbar/searchbar";
 
 function NavBar() {
   return (
@@ -22,7 +23,7 @@ function NavBar() {
             <Nav.Link href="/spiritspage">Spirits</Nav.Link>
             <Nav.Link href="/cocktaillistpage">Cocktails List</Nav.Link>
             <Nav.Link href="/searchpage">Search by Ingredient</Nav.Link>
-            <NavDropdown title="Pages" id="navbarScrollingDropdown">
+            {/* <NavDropdown title="Pages" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Cocktail List</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
@@ -34,7 +35,7 @@ function NavBar() {
             </NavDropdown>
             <Nav.Link href="#" disabled>
               Link
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -43,6 +44,7 @@ function NavBar() {
               className="me-2"
               aria-label="Search"
             />
+            {/* <SeachBar /> */}
             <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>

@@ -3,12 +3,12 @@ function DrinkInfo(props) {
     <div key={props.idDrink}>
       <h1>{props.drinkHeader}</h1>
       <img src={props.drinkImage} alt="images" />
-      <div>{props.drinkInstructions}</div>
-      <div>{props.drinkIngredient1}</div>
-      <div>{props.drinkIngredient2}</div>
-      <div>{props.drinkIngredient3}</div>
-      <div>{props.drinkIngredient4}</div>
-      <div>{props.drinkIngredient5}</div>
+      <p>{props.drinkInstructions}</p>
+      <p>{props.drinkIngredient1}</p>
+      <p>{props.drinkIngredient2}</p>
+      <p>{props.drinkIngredient3}</p>
+      <p>{props.drinkIngredient4}</p>
+      <p>{props.drinkIngredient5}</p>
     </div>
   );
 }

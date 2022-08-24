@@ -5,7 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar = () => {
+function SearchBar() {
   const [cocktails, setCocktails] = useState([]);
   const [value, setValue] = useState("");
 
@@ -76,6 +76,6 @@ const SearchBar = () => {
       </div>
     </div>
   );
-};
+}
 
 export default SearchBar;

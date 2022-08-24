@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function FilteredCocktaiList(props) {
+function FilteredCocktaiList() {
   const [cocktails, setCocktails] = useState([]);
 
   const navigate = useNavigate();
@@ -17,12 +17,15 @@ function FilteredCocktaiList(props) {
       const cocktails = await axios.get(`http://localhost:5000/cocktails/`);
       setCocktails(cocktails.data);
     }
+    console.log(cocktails);
     fetchCocktails();
   }, []);
 
   return (
-    <div className="container" key={props.spirit}>
-      <header>{props.spirit}</header>
+    <div className="container">
+      <div>
+        <h1>Place Header Here</h1>
+      </div>
       {cocktails.length ? (
         cocktails
           .filter(

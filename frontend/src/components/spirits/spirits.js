@@ -1,25 +1,28 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Spirits() {
   const navigate = useNavigate();
-  const routePage = (spirit) => {
-    let path = `/spiritsdrinkpage/${spirit}`;
+  const routePage = (spirits) => {
+    let path = `/spiritsdrinkpage/${spirits}`;
     navigate(path);
   };
 
   const spiritNames = ["Bourbon", "Gin", "Rum", "Tequila", "Vodka"];
-  const spiritNamesObj = [
-    { spirit: "Bourbon" },
-    { spirit: "Gin" },
-    { spirit: "Rum" },
-    { spirit: "Tequila" },
-    { spirit: "Vodka" },
-  ];
+  // const spiritNames = [
+  //   { idSpirit: 0, spirit: "Bourbon" },
+  //   { idSpirit: 1, spirit: "Gin" },
+  //   { idSpirit: 2, spirit: "Rum" },
+  //   { idSpirit: 3, spirit: "Tequila" },
+  //   { idSpirit: 4, spirit: "Vodka" },
+  // ];
 
   return (
-    <div key={spiritNamesObj.spirit}>
+    <div>
       {spiritNames.map((spirits) => (
-        <button onClick={() => routePage(spirits)}>{spirits}</button>
+        <div key={spirits}>
+          <button onClick={() => routePage(spirits)}>{spirits}</button>
+        </div>
       ))}
     </div>
   );

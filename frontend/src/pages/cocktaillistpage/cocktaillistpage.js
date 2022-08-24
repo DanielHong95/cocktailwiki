@@ -8,7 +8,7 @@ function CocktailListPage() {
   return (
     <div className="container">
       <NavBar />
-      <header>Cocktails</header>
+      <h2>Cocktails</h2>
       <List />
     </div>
   );
