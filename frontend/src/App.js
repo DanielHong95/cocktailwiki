@@ -21,7 +21,7 @@ function App() {
         <Route path="/drinkpage/:idDrink" element={<DrinkPage />} />
         <Route path="/searchpage" element={<SearchPage />} />
         <Route
-          path="/spiritsdrinkpage/:spirit"
+          path="/spiritsdrinkpage/:spirits"
           element={<SpiritsDrinksPage />}
         />
       </Routes>

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 function FilteredCocktaiList() {
+  const { spirits } = useParams();
+  console.log({ spirits });
   const [cocktails, setCocktails] = useState([]);
 
   const navigate = useNavigate();
@@ -14,7 +16,10 @@ function FilteredCocktaiList() {
   useEffect(() => {
     async function fetchCocktails() {
       // You can await here
-      const cocktails = await axios.get(`http://localhost:5000/cocktails/`);
+      console.log(spirits);
+      const cocktails = await axios.get(
+        `http://localhost:5000/cocktails/spirits/${spirits}`
+      );
       setCocktails(cocktails.data);
     }
     console.log(cocktails);
@@ -24,27 +29,18 @@ function FilteredCocktaiList() {
   return (
     <div className="container">
       <div>
-        <h1>Place Header Here</h1>
+        <h2>{spirits}</h2>
       </div>
       {cocktails.length ? (
-        cocktails
-          .filter(
-            (cocktail) =>
-              cocktail.strIngredient1 === "Bourbon" ||
-              cocktail.strIngredient2 === "Bourbon" ||
-              cocktail.strIngredient3 === "Bourbon" ||
-              cocktail.strIngredient4 === "Bourbon" ||
-              cocktail.strIngredient5 === "Bourbon"
-          )
-          .map((cocktail, index) => {
-            return (
-              <div key={cocktail.idDrinK}>
-                <p onClick={() => routePage(cocktail.idDrinK)}>
-                  {index + 1}. {cocktail.strDrink}
-                </p>
-              </div>
-            );
-          })
+        cocktails.map((cocktail, index) => {
+          return (
+            <div key={cocktail.idDrinK}>
+              <p onClick={() => routePage(cocktail.idDrinK)}>
+                {index + 1}. {cocktail.strDrink}
+              </p>
+            </div>
+          );
+        })
       ) : (
         <p></p>
       )}

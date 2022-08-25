@@ -30,7 +30,22 @@ app.get("/cocktails/:id", async (req, res) => {
     );
 
     res.json(cocktails.rows[0]);
-    console.log(req.params);
+    // console.log(req.params);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+// filter spirits
+app.get("/cocktails/spirits/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const cocktails = await pool.query(
+      'SELECT * FROM cocktails WHERE "strIngredient1" = $1 OR "strIngredient2" = $1 OR "strIngredient3"= $1 OR "strIngredient4" = $1 OR "strIngredient5" = $1 ',
+      [id]
+    );
+    console.log({ cocktails });
+    res.json(cocktails.rows);
   } catch (err) {
     console.error(err.message);
   }
