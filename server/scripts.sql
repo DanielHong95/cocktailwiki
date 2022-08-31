@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS public.cocktails
 (
-    "idDrinK" integer NOT NULL DEFAULT nextval('"cocktails_idDrinK_seq"'::regclass),
+    "idDrinK" integer NOT NULL,
     "strDrink" character varying(255) COLLATE pg_catalog."default",
     "strDrinkAlternate" character varying(255) COLLATE pg_catalog."default",
     "strTags" character varying(255) COLLATE pg_catalog."default",
