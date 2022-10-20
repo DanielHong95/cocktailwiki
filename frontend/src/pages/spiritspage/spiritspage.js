@@ -8,7 +8,9 @@ function SpiritsPage() {
   return (
     <div className="container">
       <NavBar />
-      <h2>Spirits</h2>
+      <h2>
+        <center>Spirits</center>
+      </h2>
       <Spirits />
     </div>
   );

@@ -7,7 +7,7 @@ import HomePage from "./pages/homepage/homepage";
 import SpiritsPage from "./pages/spiritspage/spiritspage";
 import CocktailListPage from "./pages/cocktaillistpage/cocktaillistpage";
 import DrinkPage from "./pages/drinkpage/drinkpage";
-import SearchPage from "./pages/searchpage/searchpage";
+import IngredientSearchPage from "./pages/ingredientsearchpage/ingredientsearchpage";
 import SpiritsDrinksPage from "./pages/spiritsdrinkpage/spiritsdrinkpage";
 
 function App() {
@@ -19,7 +19,10 @@ function App() {
         <Route path="/spiritspage" element={<SpiritsPage />} />
         <Route path="/cocktaillistpage" element={<CocktailListPage />} />
         <Route path="/drinkpage/:idDrink" element={<DrinkPage />} />
-        <Route path="/searchpage" element={<SearchPage />} />
+        <Route
+          path="/ingredientsearchpage"
+          element={<IngredientSearchPage />}
+        />
         <Route
           path="/spiritsdrinkpage/:spirits"
           element={<SpiritsDrinksPage />}

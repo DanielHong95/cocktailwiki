@@ -27,8 +27,12 @@ function List() {
         cocktails.map((cocktail, index) => {
           return (
             <div key={cocktail.idDrinK}>
-              <p onClick={() => routePage(cocktail.idDrinK)}>
-                {index + 1}. {cocktail.strDrink}
+              <p
+                href="#"
+                class="link"
+                onClick={() => routePage(cocktail.idDrinK)}
+              >
+                {cocktail.strDrink}
               </p>
             </div>
           );

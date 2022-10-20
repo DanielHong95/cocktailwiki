@@ -42,6 +42,11 @@ function DrinkPage(props) {
         drinkIngredient8={cocktailInfo.strIngredient8}
         drinkIngredient9={cocktailInfo.strIngredient9}
         drinkIngredient10={cocktailInfo.strIngredient10}
+        drinkMeasure1={cocktailInfo.strMeasure1}
+        drinkMeasure2={cocktailInfo.strMeasure2}
+        drinkMeasure3={cocktailInfo.strMeasure3}
+        drinkMeasure4={cocktailInfo.strMeasure4}
+        drinkMeasure5={cocktailInfo.strMeasure5}
       />
     </div>
   );

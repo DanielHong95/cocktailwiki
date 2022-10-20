@@ -9,13 +9,6 @@ function Spirits() {
   };
 
   const spiritNames = ["Bourbon", "Gin", "Rum", "Tequila", "Vodka"];
-  // const spiritNames = [
-  //   { idSpirit: 0, spirit: "Bourbon" },
-  //   { idSpirit: 1, spirit: "Gin" },
-  //   { idSpirit: 2, spirit: "Rum" },
-  //   { idSpirit: 3, spirit: "Tequila" },
-  //   { idSpirit: 4, spirit: "Vodka" },
-  // ];
 
   return (
     <div>

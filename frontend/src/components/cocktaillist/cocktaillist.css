@@ -1,0 +1,12 @@
+.link span{
+  color:blue;
+  font-size:30px;
+}
+
+.link:hover span{
+  font-weight:bold;
+}
+
+.link:hover{
+  text-decoration:underline;
+}

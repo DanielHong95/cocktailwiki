@@ -1,12 +1,12 @@
 // import components
 import NavBar from "../../components/navbar/navbar";
-import FilteredCocktaiList from "../../components/filteredcocktaillist/filteredcocktaillist";
+import SpiritsCocktailList from "../../components/spiritscocktaillist/spiritscocktaillist";
 
 function SpiritsDrinksPage() {
   return (
     <div className="container">
       <NavBar />
-      <FilteredCocktaiList />
+      <SpiritsCocktailList />
     </div>
   );
 }

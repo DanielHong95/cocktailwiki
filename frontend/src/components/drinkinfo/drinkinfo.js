@@ -4,11 +4,21 @@ function DrinkInfo(props) {
       <h1>{props.drinkHeader}</h1>
       <img src={props.drinkImage} alt="images" />
       <p>{props.drinkInstructions}</p>
-      <p>{props.drinkIngredient1}</p>
-      <p>{props.drinkIngredient2}</p>
-      <p>{props.drinkIngredient3}</p>
-      <p>{props.drinkIngredient4}</p>
-      <p>{props.drinkIngredient5}</p>
+      <p>
+        {props.drinkMeasure1} {props.drinkIngredient1}
+      </p>
+      <p>
+        {props.drinkMeasure2} {props.drinkIngredient2}
+      </p>
+      <p>
+        {props.drinkMeasure3} {props.drinkIngredient3}
+      </p>
+      <p>
+        {props.drinkMeasure4} {props.drinkIngredient4}
+      </p>
+      <p>
+        {props.drinkMeasure5} {props.drinkIngredient5}
+      </p>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-function FilteredCocktaiList() {
+function SpiritsCocktailList() {
   const { spirits } = useParams();
   console.log({ spirits });
   const [cocktails, setCocktails] = useState([]);
@@ -24,7 +24,7 @@ function FilteredCocktaiList() {
     }
     console.log(cocktails);
     fetchCocktails();
-  }, []);
+  });
 
   return (
     <div className="container">
@@ -48,4 +48,4 @@ function FilteredCocktaiList() {
   );
 }
 
-export default FilteredCocktaiList;
+export default SpiritsCocktailList;
