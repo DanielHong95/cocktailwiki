@@ -7,6 +7,7 @@ function SpiritsCocktailList() {
   console.log({ spirits });
   const [cocktails, setCocktails] = useState([]);
 
+  // route to drink info page
   const navigate = useNavigate();
   const routePage = (idDrink) => {
     let path = `/drinkpage/${idDrink}`;
