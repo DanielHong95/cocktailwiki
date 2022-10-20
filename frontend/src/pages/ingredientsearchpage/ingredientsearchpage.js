@@ -1,6 +1,5 @@
 import NavBar from "../../components/navbar/navbar";
-import IngredientFilter from "../../components/multiplefiltertest/multiplefiltertest";
-import Tags from "../../components/multiplefiltertest/multiplefiltertest";
+import UniqueIngredients from "../../components/uniqueingredients/uniqueingredients";
 
 function IngredientSearchPage() {
   return (
@@ -14,7 +13,7 @@ function IngredientSearchPage() {
           alignItems: "center",
         }}
       >
-        <IngredientFilter />
+        <UniqueIngredients />
       </div>
     </div>
   );
