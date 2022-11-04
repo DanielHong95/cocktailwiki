@@ -51,6 +51,19 @@ app.get("/cocktails/spirits/:id", async (req, res) => {
   }
 });
 
+// get cocktails filtered by chosen ingredients
+app.get("/cocktails/ingredients", async (req, res) => {
+  try {
+    const ingredients = await pool.query(
+      'SELECT * FROM cocktails WHERE "strIngredient1" IN (Bourbon, Gin, Bitters) AND "strIngredient2" IN (Bourbon, Gin, Bitters)'
+    );
+    console.log(ingredients);
+    res.json(ingredients.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
 app.listen(5000, () => {
   console.log("server has started on port 5000");
 });

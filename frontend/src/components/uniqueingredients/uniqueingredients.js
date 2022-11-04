@@ -4,7 +4,7 @@ import axios from "axios";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
-import FilteredDrink from "../filtereddrink/filtereddrink";
+import FilteredDrink from "../filtereddrinklist/filtereddrinklist";
 
 function IngredientFilter() {
   const [ingredients, setIngredients] = useState([]);
@@ -32,12 +32,12 @@ function IngredientFilter() {
         ingredientSet.add(cocktails[i].strIngredient8);
       }
       // convert set to array
-      const aggregateIngredients = Array.from(ingredientSet);
+      const allIngredients = Array.from(ingredientSet);
       // get rid of null values
-      const ingredientArray = aggregateIngredients.filter((n) => n);
-      console.log(ingredientArray);
+      const uniqueIngredients = allIngredients.filter((n) => n);
+      console.log(uniqueIngredients);
 
-      setIngredients(ingredientArray);
+      setIngredients(uniqueIngredients);
       // console.log(cocktails);
     }
     fetchIngredients();
@@ -47,8 +47,11 @@ function IngredientFilter() {
   function handleInputChage(event, value) {
     setSelectedIngredients(value);
 
-    console.log(selectedIngredients);
+    // send array of ingredients to server
   }
+
+  // state var selectedIngredients is dynamic array of all selected ingredients
+  console.log(selectedIngredients);
 
   return (
     <Stack spacing={3} sx={{ width: 500 }}>
@@ -67,7 +70,10 @@ function IngredientFilter() {
           />
         )}
       />
-      <FilteredDrink drinkArray={selectedIngredients} />
+      <FilteredDrink
+        key={selectedIngredients}
+        ingredientsArray={selectedIngredients}
+      />
     </Stack>
   );
 }

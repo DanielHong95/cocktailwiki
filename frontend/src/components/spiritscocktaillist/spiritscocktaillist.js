@@ -14,6 +14,7 @@ function SpiritsCocktailList() {
     navigate(path);
   };
 
+  // get all data of selected spirit
   useEffect(() => {
     async function fetchCocktails() {
       // You can await here
@@ -25,7 +26,7 @@ function SpiritsCocktailList() {
     }
     console.log(cocktails);
     fetchCocktails();
-  });
+  }, []);
 
   return (
     <div className="container">
