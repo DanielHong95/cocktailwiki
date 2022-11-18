@@ -65,6 +65,7 @@ function IngredientFilter() {
             {...params}
             label="Ingredients"
             placeholder="Search Ingredients"
+            sx={{ bgcolor: "#fff" }}
           />
         )}
       />

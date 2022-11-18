@@ -9,6 +9,7 @@ function HomePage() {
   return (
     <div>
       <NavBar2 />
+      <h1>HOME</h1>
       <div className="searchbar">
         <SearchBar2 />
       </div>

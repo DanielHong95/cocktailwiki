@@ -24,9 +24,8 @@ function DrinkPage(props) {
     return <p>loading...</p>;
   }
   return (
-    <div className="container">
+    <div>
       <NavBar2 />
-      <p></p>
       <DrinkInfo
         idDrink={idDrink}
         drinkHeader={cocktailInfo.strDrink}

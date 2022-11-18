@@ -1,5 +1,5 @@
 import * as React from "react";
-import Logo from "../../images/thecocktailwiki_logo.png";
+import Logo from "../../images/logo_final.png";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -26,30 +26,58 @@ function NavBar2() {
               display: { xs: "none", md: "flex" },
             }}
           >
-            <img src={Logo} alt="" width="350" height="100" />
+            <img src={Logo} alt="" width="400" height="100" />
             <Button
-              sx={{ my: 4, color: "white", display: "block" }}
+              sx={{
+                my: 4,
+                mx: 5,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
               component="a"
               href="/"
             >
               Home
             </Button>
             <Button
-              sx={{ my: 4, color: "white", display: "block" }}
+              sx={{
+                my: 4,
+                mx: 5,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
               component="a"
               href="/spiritspage"
             >
               Spirits
             </Button>
             <Button
-              sx={{ my: 4, color: "white", display: "block" }}
+              sx={{
+                my: 4,
+                mx: 5,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
               component="a"
               href="/cocktaillistpage"
             >
               Cocktails List
             </Button>
             <Button
-              sx={{ my: 4, color: "white", display: "block" }}
+              sx={{
+                my: 4,
+                mx: 5,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
               component="a"
               href="/ingredientsearchpage"
             >

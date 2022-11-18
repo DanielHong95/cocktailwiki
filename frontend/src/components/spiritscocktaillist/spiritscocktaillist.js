@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import "../spiritscocktaillist/spiritscocktaillist.css";
 
 function SpiritsCocktailList() {
   const { spirits } = useParams();
@@ -31,15 +32,20 @@ function SpiritsCocktailList() {
   return (
     <div className="container">
       <div>
-        <h2>{spirits}</h2>
+        <h1>{spirits.toUpperCase()}</h1>
       </div>
       {cocktails.length ? (
         cocktails.map((cocktail, index) => {
           return (
             <div key={cocktail.idDrinK}>
-              <p onClick={() => routePage(cocktail.idDrinK)}>
-                {index + 1}. {cocktail.strDrink}
-              </p>
+              <center>
+                <div
+                  className="list"
+                  onClick={() => routePage(cocktail.idDrinK)}
+                >
+                  {cocktail.strDrink}
+                </div>
+              </center>
             </div>
           );
         })

@@ -5,7 +5,7 @@ function IngredientSearchPage() {
   return (
     <div className="container">
       <NavBar2 />
-      <div>Search by Ingredient</div>
+      <h1>SEARCH BY INGREDIENTS</h1>
       <div
         style={{
           display: "flex",

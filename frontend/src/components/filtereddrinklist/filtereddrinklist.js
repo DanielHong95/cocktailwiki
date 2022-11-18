@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../filtereddrinklist/filtereddrinklist.css";
 
 function FilteredDrinkList(props) {
   const [filteredDrink, setFilteredDrinks] = useState([]);
@@ -48,11 +49,16 @@ function FilteredDrinkList(props) {
       {drink.length ? (
         drink.map((cocktail, index) => {
           return (
-            <div key={cocktail.idDrinK}>
-              <p onClick={() => routePage(cocktail.idDrinK)}>
-                {index + 1}. {cocktail.strDrink}
-              </p>
-            </div>
+            <center>
+              <div key={cocktail.idDrinK}>
+                <div
+                  className="list"
+                  onClick={() => routePage(cocktail.idDrinK)}
+                >
+                  {cocktail.strDrink}
+                </div>
+              </div>
+            </center>
           );
         })
       ) : (

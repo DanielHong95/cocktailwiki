@@ -9,7 +9,7 @@ function CocktailListPage() {
   return (
     <div className="container">
       <NavBar2 />
-      <h1 className="header">Cocktails</h1>
+      <h1 className="header">COCKTAILS</h1>
       <List />
     </div>
   );
