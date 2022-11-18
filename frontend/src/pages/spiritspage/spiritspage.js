@@ -1,13 +1,13 @@
 import React from "react";
 
 // import components
-import NavBar from "../../components/navbar/navbar";
+import NavBar2 from "../../components/navbar2/navbar2";
 import Spirits from "../../components/spirits/spirits";
 
 function SpiritsPage() {
   return (
     <div className="container">
-      <NavBar />
+      <NavBar2 />
       <h2>
         <center>Spirits</center>
       </h2>

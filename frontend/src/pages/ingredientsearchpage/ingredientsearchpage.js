@@ -1,10 +1,10 @@
-import NavBar from "../../components/navbar/navbar";
+import NavBar2 from "../../components/navbar2/navbar2";
 import UniqueIngredients from "../../components/uniqueingredients/uniqueingredients";
 
 function IngredientSearchPage() {
   return (
     <div className="container">
-      <NavBar />
+      <NavBar2 />
       <div>Search by Ingredient</div>
       <div
         style={{

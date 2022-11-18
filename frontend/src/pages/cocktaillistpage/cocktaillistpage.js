@@ -1,14 +1,15 @@
 import React from "react";
 
 // import components
-import NavBar from "../../components/navbar/navbar";
+import NavBar2 from "../../components/navbar2/navbar2";
 import List from "../../components/cocktaillist/cocktaillist";
+import "../cocktaillistpage/cocktaillistpage.css";
 
 function CocktailListPage() {
   return (
     <div className="container">
-      <NavBar />
-      <h2>Cocktails</h2>
+      <NavBar2 />
+      <h1 className="header">Cocktails</h1>
       <List />
     </div>
   );

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 // import components
-import NavBar from "../../components/navbar/navbar";
+import NavBar2 from "../../components/navbar2/navbar2";
 import DrinkInfo from "../../components/drinkinfo/drinkinfo";
 
 function DrinkPage(props) {
@@ -25,7 +25,7 @@ function DrinkPage(props) {
   }
   return (
     <div className="container">
-      <NavBar />
+      <NavBar2 />
       <p></p>
       <DrinkInfo
         idDrink={idDrink}

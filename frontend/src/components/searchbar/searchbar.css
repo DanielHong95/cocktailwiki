@@ -36,3 +36,7 @@ input {
 .search-inner {
   display: flex;
 }
+
+header {
+  color: blue;
+}

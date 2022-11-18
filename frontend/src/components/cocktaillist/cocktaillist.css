@@ -1,12 +1,13 @@
-.link span{
-  color:blue;
-  font-size:30px;
+.list {
+  display: flex;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
+  width:fit-content;
+  justify-content: center;
 }
 
-.link:hover span{
-  font-weight:bold;
-}
-
-.link:hover{
-  text-decoration:underline;
+.list:hover{
+  transform: scale(1.2);
+  opacity:100%;
 }

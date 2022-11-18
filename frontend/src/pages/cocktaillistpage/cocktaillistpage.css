@@ -1,0 +1,9 @@
+.container {
+  text-align: center;
+}
+
+.header {
+  color:  white;
+  font-size: 300%;
+  font-family: 'Courier New', Courier, monospace;
+}

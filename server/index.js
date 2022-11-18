@@ -55,7 +55,7 @@ app.get("/cocktails/spirits/:id", async (req, res) => {
 app.get("/cocktails/ingredients", async (req, res) => {
   try {
     const ingredients = await pool.query(
-      'SELECT * FROM cocktails WHERE "strIngredient1" IN (Bourbon, Gin, Bitters) AND "strIngredient2" IN (Bourbon, Gin, Bitters)'
+      'SELECT * FROM cocktails WHERE "strIngredient1" IN ("Bourbon") AND "strIngredient2" IN (Bourbon, Gin, Bitters)'
     );
     console.log(ingredients);
     res.json(ingredients.rows);

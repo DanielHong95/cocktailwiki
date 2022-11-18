@@ -36,8 +36,6 @@ function SearchBar() {
 
   return (
     <div>
-      <header>Search Cocktails</header>
-
       <div className="search-container">
         <div className="search-inner">
           <input
@@ -45,6 +43,7 @@ function SearchBar() {
             value={value}
             onChange={onChange}
             key={cocktails.idDrinK}
+            placeholder="Search Cocktails"
           />
           <SearchIcon onClick={() => onSearch(cocktails.idDrinK)} />
           <CloseIcon id="clearBtn" onClick={clearInput} />

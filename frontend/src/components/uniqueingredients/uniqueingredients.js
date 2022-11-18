@@ -44,10 +44,8 @@ function IngredientFilter() {
   }, []);
 
   // create an array of selected ingredients
-  function handleInputChage(event, value) {
+  function handleInputChange(event, value) {
     setSelectedIngredients(value);
-
-    // send array of ingredients to server
   }
 
   // state var selectedIngredients is dynamic array of all selected ingredients
@@ -59,7 +57,7 @@ function IngredientFilter() {
         multiple
         id="tags-outlined"
         options={ingredients}
-        onChange={handleInputChage}
+        onChange={handleInputChange}
         defaultValue={[]}
         filterSelectedOptions
         renderInput={(params) => (

@@ -22,14 +22,14 @@ function List() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {cocktails.length ? (
         cocktails.map((cocktail, index) => {
           return (
             <div key={cocktail.idDrinK}>
               <p
                 href="#"
-                class="link"
+                className="list"
                 onClick={() => routePage(cocktail.idDrinK)}
               >
                 {cocktail.strDrink}
