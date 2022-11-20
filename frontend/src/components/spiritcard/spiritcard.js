@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../spiritimage/spiritimage.css";
+import "./spiritcard.css";
 
-function SpiritImage({ id, spirit, imageUrl }) {
+function SpiritCard({ id, spirit, imageUrl }) {
   const navigate = useNavigate();
   const routePage = (spirits) => {
-    let path = `/spiritsdrinkpage/${spirits}`;
+    let path = `/spiritscocktails/${spirits}`;
     navigate(path);
   };
 
@@ -17,11 +17,11 @@ function SpiritImage({ id, spirit, imageUrl }) {
       />
       <div className="content">
         <div className="spirit" onClick={() => routePage(spirit)}>
-          {spirit}
+          {spirit.toUpperCase()}
         </div>
       </div>
     </div>
   );
 }
 
-export default SpiritImage;
+export default SpiritCard;

@@ -1,19 +1,19 @@
 import React from "react";
-import "./homepage.css";
 
-// import components
-import SearchBar2 from "../../components/searchbar2/searchbar2";
-import NavBar2 from "../../components/navbar2/navbar2";
+//components
+import SearchBar from "../../components/searchbar/searchbar.js";
+import NavBar from "../../components/navbar/navbar.js";
+import "./homepage.css";
 
 function HomePage() {
   return (
     <div>
-      <NavBar2 />
+      <NavBar />
       <h1>HOME</h1>
       <div className="searchbar">
-        <SearchBar2 />
+        <SearchBar />
       </div>
-      <div className="lorem-ipsum">
+      <div className="paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

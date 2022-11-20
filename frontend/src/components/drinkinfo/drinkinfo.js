@@ -2,9 +2,9 @@ import "../drinkinfo/drinkinfo.css";
 
 function DrinkInfo(props) {
   return (
-    <div key={props.idDrink} className="container">
+    <div key={props.idDrink}>
       <h1>{props.drinkHeader}</h1>
-      <img src={props.drinkImage} alt="images" className="image" />
+      <img src={props.drinkImage} alt="images" className="image" />\
       <div className="info">
         <p>{props.drinkInstructions}</p>
         <p>

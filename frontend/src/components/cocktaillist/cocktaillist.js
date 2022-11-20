@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./cocktaillist.css";
 import axios from "axios";
 
-function List() {
+function CocktailList() {
   const [cocktails, setCocktails] = useState([]);
 
   const navigate = useNavigate();
   const routePage = (idDrink) => {
-    let path = `/drinkpage/${idDrink}`;
+    let path = `/drinkinfo/${idDrink}`;
     navigate(path);
   };
 
@@ -27,15 +26,13 @@ function List() {
         cocktails.map((cocktail, index) => {
           return (
             <div key={cocktail.idDrinK}>
-              <center>
-                <div
-                  href="#"
-                  className="list"
-                  onClick={() => routePage(cocktail.idDrinK)}
-                >
-                  {cocktail.strDrink}
-                </div>
-              </center>
+              <div
+                className="list"
+                href="#"
+                onClick={() => routePage(cocktail.idDrinK)}
+              >
+                {cocktail.strDrink}
+              </div>
             </div>
           );
         })
@@ -46,4 +43,4 @@ function List() {
   );
 }
 
-export default List;
+export default CocktailList;

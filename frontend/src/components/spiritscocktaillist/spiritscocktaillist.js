@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import "../spiritscocktaillist/spiritscocktaillist.css";
 
 function SpiritsCocktailList() {
   const { spirits } = useParams();
@@ -11,7 +10,7 @@ function SpiritsCocktailList() {
   // route to drink info page
   const navigate = useNavigate();
   const routePage = (idDrink) => {
-    let path = `/drinkpage/${idDrink}`;
+    let path = `/drinkinfo/${idDrink}`;
     navigate(path);
   };
 
@@ -38,14 +37,9 @@ function SpiritsCocktailList() {
         cocktails.map((cocktail, index) => {
           return (
             <div key={cocktail.idDrinK}>
-              <center>
-                <div
-                  className="list"
-                  onClick={() => routePage(cocktail.idDrinK)}
-                >
-                  {cocktail.strDrink}
-                </div>
-              </center>
+              <div className="list" onClick={() => routePage(cocktail.idDrinK)}>
+                {cocktail.strDrink}
+              </div>
             </div>
           );
         })

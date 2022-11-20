@@ -1,16 +1,15 @@
 import React from "react";
 
-// import components
-import NavBar2 from "../../components/navbar2/navbar2";
-import List from "../../components/cocktaillist/cocktaillist";
-import "../cocktaillistpage/cocktaillistpage.css";
+//components
+import NavBar from "../../components/navbar/navbar";
+import CocktailList from "../../components/cocktaillist/cocktaillist";
 
 function CocktailListPage() {
   return (
-    <div className="container">
-      <NavBar2 />
-      <h1 className="header">COCKTAILS</h1>
-      <List />
+    <div>
+      <NavBar />
+      <h1>COCKTAILS</h1>
+      <CocktailList />
     </div>
   );
 }

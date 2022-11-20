@@ -1,5 +1,7 @@
 import React from "react";
-import SpiritImage from "../spiritimage/spiritimage";
+
+// components
+import SpiritCard from "../spiritcard/spiritcard";
 
 function Spirits() {
   const spiritData = [
@@ -38,7 +40,7 @@ function Spirits() {
   return (
     <div>
       {spiritData.map(({ id, spirit, imageUrl }) => (
-        <SpiritImage key={id} spirit={spirit} imageUrl={imageUrl} />
+        <SpiritCard key={id} spirit={spirit} imageUrl={imageUrl} />
       ))}
     </div>
   );

@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-// import components
-import NavBar2 from "../../components/navbar2/navbar2";
+//components
+import NavBar from "../../components/navbar/navbar";
 import DrinkInfo from "../../components/drinkinfo/drinkinfo";
 
-function DrinkPage(props) {
+function DrinkInfoPage(props) {
   const { idDrink } = useParams();
   const [cocktailInfo, setCocktailInfo] = useState();
 
@@ -25,7 +25,7 @@ function DrinkPage(props) {
   }
   return (
     <div>
-      <NavBar2 />
+      <NavBar />
       <DrinkInfo
         idDrink={idDrink}
         drinkHeader={cocktailInfo.strDrink}
@@ -51,4 +51,4 @@ function DrinkPage(props) {
   );
 }
 
-export default DrinkPage;
+export default DrinkInfoPage;

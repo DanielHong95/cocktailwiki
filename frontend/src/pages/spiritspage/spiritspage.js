@@ -1,14 +1,11 @@
-import React from "react";
-
-// import components
-import NavBar2 from "../../components/navbar2/navbar2";
+//components
+import NavBar from "../../components/navbar/navbar";
 import Spirits from "../../components/spirits/spirits";
-import "../spiritspage/spiritspage.css";
 
 function SpiritsPage() {
   return (
     <div>
-      <NavBar2 />
+      <NavBar />
       <h1>SPIRITS</h1>
       <Spirits />
     </div>

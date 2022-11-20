@@ -2,30 +2,27 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-// import pages
+//pages
 import HomePage from "./pages/homepage/homepage";
 import SpiritsPage from "./pages/spiritspage/spiritspage";
 import CocktailListPage from "./pages/cocktaillistpage/cocktaillistpage";
-import DrinkPage from "./pages/drinkpage/drinkpage";
+import DrinkInfoPage from "./pages/drinkinfopage/drinkinfopage";
 import IngredientSearchPage from "./pages/ingredientsearchpage/ingredientsearchpage";
-import SpiritsDrinksPage from "./pages/spiritsdrinkpage/spiritsdrinkpage";
+import SpiritsCocktailsPage from "./pages/spiritscocktailspage/spiritscocktailspage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/homepage" element={<HomePage />} />
-        <Route path="/spiritspage" element={<SpiritsPage />} />
-        <Route path="/cocktaillistpage" element={<CocktailListPage />} />
-        <Route path="/drinkpage/:idDrink" element={<DrinkPage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/spirits" element={<SpiritsPage />} />
+        <Route path="/cocktaillist" element={<CocktailListPage />} />
+        <Route path="/drinkinfo/:idDrink" element={<DrinkInfoPage />} />
+        <Route path="/searchbyingredient" element={<IngredientSearchPage />} />
         <Route
-          path="/ingredientsearchpage"
-          element={<IngredientSearchPage />}
-        />
-        <Route
-          path="/spiritsdrinkpage/:spirits"
-          element={<SpiritsDrinksPage />}
+          path="/spiritscocktails/:spirits"
+          element={<SpiritsCocktailsPage />}
         />
       </Routes>
     </BrowserRouter>

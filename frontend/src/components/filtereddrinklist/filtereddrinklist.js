@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../filtereddrinklist/filtereddrinklist.css";
 
 function FilteredDrinkList(props) {
   const [filteredDrink, setFilteredDrinks] = useState([]);
@@ -9,7 +8,7 @@ function FilteredDrinkList(props) {
   // route to drink info page
   const navigate = useNavigate();
   const routePage = (idDrink) => {
-    let path = `/drinkpage/${idDrink}`;
+    let path = `/drinkinfo/${idDrink}`;
     navigate(path);
   };
 

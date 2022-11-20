@@ -1,3 +1,4 @@
+/* global css */
 body {
   background-image: url("../../images/background.jpg");
   background-color: grey;
@@ -6,27 +7,64 @@ body {
   background-size: 1920px 1080px;
 }
 
+h1 {
+  display: flex;
+  text-align: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  font-size: 300%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-block: 20px;
+  padding-inline: 20px;
+  width: fit-content;
+  background-color: black;
+  border: 1px solid #f1f1f1;
+  border-color: white;
+  background-size: contain;
+}
+
+.list {
+  display: flex;
+  text-align: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
+  width: fit-content;
+  margin:auto;
+  margin-top: 20px;
+}
+
+.list:hover {
+  transform: scale(1.1);
+  opacity:50%;
+  transition: .1s ease-out;
+  cursor: pointer;
+}
+
+/* homepage css */
 .searchbar {
   display: flex;
-  padding-top:;
   justify-content: center;
 }
 
-.lorem-ipsum {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, .5); /* Black w/opacity/see-through */
+.paragraph {
+  /* content */
   color: white;
   font-weight: lighter;
-  font-size: xx-large;
+  font-size:xx-large;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  /* border */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, .5); /* Black w/opacity/see-through */
   border: 1px solid #f1f1f1;
   border-color: white;
-  position:absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  position:static;
+  margin: auto;
+  margin-top: 50px;
   width: 80%;
   padding: 20px;
-  text-align: center;
 }

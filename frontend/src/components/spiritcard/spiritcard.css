@@ -5,13 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid black; */
   margin: 1rem 0;
   overflow: hidden;
   position: relative;
 }
 .menu-item:hover {
   cursor: pointer;
+  
 }
 
 .menu-item .background-image {
@@ -30,7 +30,6 @@
   background-color: black;
   color: white;
   position: absolute;
-  transition: 2s ease-out;
 }
 .menu-item .content .spirit {
   font-weight: 700;
@@ -40,9 +39,11 @@
   font-family: 'Courier New', Courier, monospace;
   color: #fff;
   text-align: center;
+  font-weight: lighter;
 
 }
 .menu-item .content:hover {
   transform: scale(1.1);
-  opacity:60%;
+  opacity:50%;
+  transition: .1s ease-out;
 }

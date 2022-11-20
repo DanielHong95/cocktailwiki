@@ -1,31 +1,94 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import dependencies
+import * as React from "react";
+import Logo from "../../images/logo_final.png";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import { ThemeProvider, createTheme } from "@mui/material";
+
+const theme = createTheme({
+  palette: {
+    background: {
+      paper: "black",
+    },
+  },
+});
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container fluid>
-        <Navbar.Brand>The Cocktail Wiki</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
+    <ThemeProvider theme={theme}>
+      <AppBar position="static">
+        <Toolbar disableGutters>
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+            }}
           >
-            <Nav.Link href="/homepage">Home</Nav.Link>
-            <Nav.Link href="/spiritspage">Spirits</Nav.Link>
-            <Nav.Link href="/cocktaillistpage">Cocktails List</Nav.Link>
-            <Nav.Link href="/ingredientsearchpage">
+            <img src={Logo} alt="" width="400" height="100" />
+            <Button
+              sx={{
+                my: 4,
+                marginLeft: 10,
+                marginRight: 2,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
+              component="a"
+              href="/"
+            >
+              Home
+            </Button>
+            <Button
+              sx={{
+                my: 4,
+                mx: 2,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
+              component="a"
+              href="/spirits"
+            >
+              Spirits
+            </Button>
+            <Button
+              sx={{
+                my: 4,
+                mx: 2,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
+              component="a"
+              href="/cocktaillist"
+            >
+              Cocktails List
+            </Button>
+            <Button
+              sx={{
+                my: 4,
+                mx: 2,
+                color: "white",
+                display: "block",
+                fontFamily: "Courier",
+                fontSize: 20,
+              }}
+              component="a"
+              href="/searchbyingredient"
+            >
               Search by Ingredient
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            </Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </ThemeProvider>
   );
 }
-
 export default NavBar;
