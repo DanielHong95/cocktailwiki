@@ -3,7 +3,7 @@ version: '3.8'
 services: 
   web:
     container_name: cocktailwiki
-    image: cocktailwiki:0.0.8
+    image: cocktailwiki:0.0.11
     build: 
       context: .
     ports:

@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+const { query } = require("express");
 
 //middelware
 app.use(cors());
@@ -59,6 +60,17 @@ app.get("/cocktails/ingredients", async (req, res) => {
     );
     console.log(ingredients);
     res.json(ingredients.rows);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+app.post("/seed", async (req, res) => {
+  try {
+    query = req.body;
+    console.log(query);
+    await pool.query(query);
+    res.json(true);
   } catch (err) {
     console.error(err.message);
   }
