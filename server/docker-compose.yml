@@ -1,0 +1,32 @@
+version: '3.8'
+
+services: 
+  web:
+    container_name: cocktailwiki
+    image: cocktailwiki:0.0.7
+    build: 
+      context: .
+    ports:
+      - "5000:5000"
+    environment: 
+      - EXTERNAL_PORT=5000
+      - PGDATABASE=cocktailwikidb
+      - PGUSER=postgres
+      - PGPASSWORD=hd.214375
+      - PGHOST=db
+    depends_on: 
+      - db
+  db: 
+    container_name: db
+    image: "postgres:14"
+    ports:
+      - "5432:5432"
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=hd.214375
+      - POSTGRES_DB=cocktailwikidb
+    volumes:
+      - nps_data:/var/lib/postgresql/data
+
+volumes:
+  nps_data: {}

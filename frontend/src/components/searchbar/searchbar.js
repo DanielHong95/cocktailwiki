@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -8,14 +8,6 @@ import Autocomplete from "@mui/material/Autocomplete";
 function SearchBar() {
   const [cocktails, setCocktails] = useState([]);
   const [value, setValue] = useState("");
-
-  const navigate = useNavigate();
-  const onSearch = (idDrink) => {
-    let path = `/drinkinfo/${idDrink}`;
-    navigate(path);
-    setValue(idDrink);
-    console.log("search ", idDrink);
-  };
 
   useEffect(() => {
     async function fetchCocktails() {
@@ -26,6 +18,14 @@ function SearchBar() {
     fetchCocktails();
   }, []);
   console.log(cocktails);
+
+  const navigate = useNavigate();
+  const onSearch = (idDrinK) => {
+    let path = `/drinkinfo/${idDrinK}`;
+    navigate(path);
+    setValue(idDrinK);
+    console.log("search ", idDrinK);
+  };
 
   return (
     <Autocomplete
@@ -40,7 +40,6 @@ function SearchBar() {
           label="Search Cocktails"
           sx={{ bgcolor: "#fff" }}
           value={value}
-          key={cocktails}
           onKeyPress={(e) => {
             if (e.key === "Enter") {
               onSearch("17222");
