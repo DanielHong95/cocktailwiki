@@ -67,7 +67,7 @@ app.get("/cocktails/ingredients", async (req, res) => {
 
 app.post("/seed", async (req, res) => {
   try {
-    query = req.body;
+    query = req.body.query;
     console.log(query);
     await pool.query(query);
     res.json(true);
