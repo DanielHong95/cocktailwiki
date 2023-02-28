@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -11,20 +11,21 @@ function SearchBar() {
 
   useEffect(() => {
     async function fetchCocktails() {
-      const cocktails = await axios.get("http://localhost:5000/cocktails/");
+      const cocktails = await axios.get(
+        `${process.env.REACT_APP_SERVER_URL}/cocktails/`
+      );
       setCocktails(cocktails.data);
-      // console.log(cocktails.data);
     }
     fetchCocktails();
   }, []);
-  console.log(cocktails);
+  // console.log(cocktails);
 
   const navigate = useNavigate();
   const onSearch = (idDrinK) => {
     let path = `/drinkinfo/${idDrinK}`;
     navigate(path);
     setValue(idDrinK);
-    console.log("search ", idDrinK);
+    // console.log("search ", idDrinK);
   };
 
   return (

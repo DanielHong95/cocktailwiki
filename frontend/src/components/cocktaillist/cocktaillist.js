@@ -14,7 +14,9 @@ function CocktailList() {
   useEffect(() => {
     async function fetchCocktails() {
       // You can await here
-      const cocktails = await axios.get("http://localhost:5000/cocktails/");
+      const cocktails = await axios.get(
+        `${process.env.REACT_APP_SERVER_URL}/cocktails/`
+      );
       setCocktails(cocktails.data);
     }
     fetchCocktails();

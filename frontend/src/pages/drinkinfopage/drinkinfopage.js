@@ -13,7 +13,7 @@ function DrinkInfoPage(props) {
   useEffect(() => {
     async function fetchCocktailById() {
       const cocktail = await axios.get(
-        `http://localhost:5000/cocktails/${idDrink}`
+        `${process.env.REACT_APP_SERVER_URL}/cocktails/${idDrink}`
       );
       setCocktailInfo(cocktail.data);
     }

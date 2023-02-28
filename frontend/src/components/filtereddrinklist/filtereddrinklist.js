@@ -14,16 +14,18 @@ function FilteredDrinkList(props) {
 
   useEffect(() => {
     async function fetchIngredients() {
-      const filteredDrink = await axios.get(`http://localhost:5000/cocktails/`);
+      const filteredDrink = await axios.get(
+        `${process.env.REACT_APP_SERVER_URL}/cocktails/`
+      );
       setFilteredDrinks(filteredDrink.data);
     }
-    console.log(filteredDrink);
+    // console.log(filteredDrink);
     fetchIngredients();
   }, []);
 
   let selectedIngredients = props.ingredientsArray;
-  console.log(selectedIngredients);
-  console.log(filteredDrink);
+  // console.log(selectedIngredients);
+  // console.log(filteredDrink);
 
   // filter all cocktails for selected cocktails
   let filterBy = {

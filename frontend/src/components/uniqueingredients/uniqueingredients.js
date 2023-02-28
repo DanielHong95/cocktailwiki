@@ -15,10 +15,10 @@ function IngredientFilter() {
     async function fetchIngredients() {
       // You can await here
       const cocktailsResponse = await axios.get(
-        "http://localhost:5000/cocktails/"
+        `${process.env.REACT_APP_SERVER_URL}/cocktails/`
       );
       const cocktails = cocktailsResponse.data;
-      console.log(cocktails.data);
+      // console.log(cocktails.data);
 
       // filter for unique strIngredient
       let ingredientSet = new Set();
@@ -35,7 +35,7 @@ function IngredientFilter() {
       const allIngredients = Array.from(ingredientSet);
       // get rid of null values
       const uniqueIngredients = allIngredients.filter((n) => n);
-      console.log(uniqueIngredients);
+      // console.log(uniqueIngredients);
 
       setIngredients(uniqueIngredients);
       // console.log(cocktails);
@@ -49,7 +49,7 @@ function IngredientFilter() {
   }
 
   // state var selectedIngredients is dynamic array of all selected ingredients
-  console.log(selectedIngredients);
+  // console.log(selectedIngredients);
 
   return (
     <Stack spacing={3} sx={{ width: 500 }}>

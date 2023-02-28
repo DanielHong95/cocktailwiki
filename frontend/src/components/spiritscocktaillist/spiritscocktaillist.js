@@ -20,11 +20,11 @@ function SpiritsCocktailList() {
       // You can await here
       console.log(spirits);
       const cocktails = await axios.get(
-        `http://localhost:5000/cocktails/spirits/${spirits}`
+        `${process.env.REACT_APP_SERVER_URL}/cocktails/spirits/${spirits}`
       );
       setCocktails(cocktails.data);
     }
-    console.log(cocktails);
+    // console.log(cocktails);
     fetchCocktails();
   }, []);
 
