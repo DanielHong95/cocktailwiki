@@ -32,7 +32,7 @@ function SearchBar() {
     <Autocomplete
       disablePortal
       id="cocktail=search"
-      getOptionLabel={(option) => option.strDrink}
+      getOptionLabel={(option) => `${option.strDrink} (${option.idDrinK})`}
       options={cocktails}
       sx={{ width: 500 }}
       renderInput={(params) => (
@@ -43,7 +43,15 @@ function SearchBar() {
           value={value}
           onKeyPress={(e) => {
             if (e.key === "Enter") {
-              onSearch("17222");
+              const selectedOption = cocktails.find(
+                (option) =>
+                  `${option.strDrink} (${option.idDrinK})` ===
+                  params.inputProps.value
+              );
+              const selectedIdDrink = selectedOption
+                ? selectedOption.idDrinK
+                : null;
+              onSearch(selectedIdDrink);
             }
           }}
         />
