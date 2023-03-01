@@ -14,13 +14,15 @@ function HomePage() {
         <SearchBar />
       </div>
       <div className="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Hello world, my name is Daniel Hong and welcome to my Cocktail Wikipedia
+        website! The idea for this website was born during the pandemic from my
+        frustrations of not being able to find cocktail recipes that used the
+        slew of ingredients that I had on hand. Throughout these past few
+        months, I delved into the wonderful world of web development and have
+        found that both web development and creating cocktails are not too
+        dissimilar. Both pursuits require attention to detail, experimentation,
+        and a willingness to try new things (and sometimes fail). I hope you
+        enjoy this website!
       </div>
     </div>
   );
