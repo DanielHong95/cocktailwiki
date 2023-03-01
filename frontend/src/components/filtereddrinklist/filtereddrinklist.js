@@ -43,7 +43,7 @@ function FilteredDrinkList(props) {
   let drink = filteredDrink.filter((o) =>
     Object.keys(filterBy).some((k) => filterBy[k].some((f) => o[k] === f))
   );
-  console.log(drink);
+  // console.log(drink);
 
   return (
     <div className="container">

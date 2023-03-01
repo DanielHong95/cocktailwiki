@@ -4,7 +4,7 @@ import axios from "axios";
 
 function SpiritsCocktailList() {
   const { spirits } = useParams();
-  console.log({ spirits });
+  // console.log({ spirits });
   const [cocktails, setCocktails] = useState([]);
 
   // route to drink info page
@@ -18,7 +18,7 @@ function SpiritsCocktailList() {
   useEffect(() => {
     async function fetchCocktails() {
       // You can await here
-      console.log(spirits);
+      // console.log(spirits);
       const cocktails = await axios.get(
         `${process.env.REACT_APP_SERVER_URL}/cocktails/spirits/${spirits}`
       );
