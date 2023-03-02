@@ -1,6 +1,6 @@
 # CocktailWiki
 
-![alt text](/cocktail-wiki/frontend/src/images/logo_final.png)
+![alt text](../cocktail-wiki/frontend/src/images/logo_final.png)
 
 ## Demo
 
