@@ -10,8 +10,8 @@ Check out a demo of the project <a href="http://scary-glass.surge.sh/" target="_
 
 ### Frontend
 
-- React
-- MaterialUI
+React
+MaterialUI
 
 ### Backend
 
