@@ -28,27 +28,27 @@ AWS (EC2)
 
 ## Installation
 
-$ git clone https://github.com/DanielHong95/cocktailwiki.git
+\*$ git clone https://github.com/DanielHong95/cocktailwiki.git
 
 ### Frontend Installation
 
-$ cd cocktail-wiki/frontend
+$ cd cocktail-wiki/frontend<br>
 $ npm install
 
 ### Backend Installation
 
-- $ cd cocktail-wiki/server
-- $ npm install
+$ cd cocktail-wiki/server<br>
+$ npm install
 
 ## Running the Project
 
 ### Running the Frontend
 
-- $ cd cocktail-wiki/frontend
-- $ npm start
+$ cd cocktail-wiki/frontend<br>
+$ npm start
 
 ### Running the Backend
 
-- $ cd cocktail-wiki/server
-- $ npm install -g nodemon
-- $ nodemon start
+$ cd cocktail-wiki/server<br>
+$ npm install -g nodemon<br>
+$ nodemon start
