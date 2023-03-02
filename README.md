@@ -1,6 +1,6 @@
 # CocktailWiki
 
-<img src="C:\Users\danie\OneDrive\Desktop\webdevstuff\Projects\cocktail-wiki\frontend\src\images\logo_final.png" alt="">
+![alt text](logo_final.png)
 
 ## Demo
 
@@ -10,30 +10,30 @@ Check out a demo of the project <a href="http://scary-glass.surge.sh/" target="_
 
 ### Frontend
 
-React
+React <br />
 MaterialUI
 
 ### Backend
 
-- Node.js
-- Express
-- Postgres
-- Sequelize
+Node.js<br />
+Express<br />
+Postgres<br />
+Sequelize
 
 ### Deployment
 
-- Docker
-- Docker Compose
-- AWS (EC2)
+Docker<br />
+Docker Compose<br />
+AWS (EC2)
 
 ## Installation
 
-- $ git clone https://github.com/DanielHong95/cocktailwiki.git
+$ git clone https://github.com/DanielHong95/cocktailwiki.git
 
 ### Frontend Installation
 
-- $ cd cocktail-wiki/frontend
-- $ npm install
+$ cd cocktail-wiki/frontend
+$ npm install
 
 ### Backend Installation
 
