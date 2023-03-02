@@ -1,6 +1,8 @@
 # CocktailWiki
 
-![alt text](/logo_final.png)
+![alt text](/logo_final.png)<br />
+<br />
+The Cocktail Wiki is a fullstack web application that utilized the PERN stack. This application contains a list of over 400 different cocktails, and instructions on how to prepare them. You can search all cocktails, see a list of cocktails by their base spirit, or search cocktails by ingredients they use.
 
 ## Demo
 
