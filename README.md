@@ -1,6 +1,6 @@
 # CocktailWiki
 
-![alt text](\frontend\src\images\logo_final.png)
+![alt text](/cocktail-wiki/frontend/src/images/logo_final.png)
 
 ## Demo
 
@@ -28,7 +28,7 @@ AWS (EC2)
 
 ## Installation
 
-\*$ git clone https://github.com/DanielHong95/cocktailwiki.git
+\$ git clone https://github.com/DanielHong95/cocktailwiki.git
 
 ### Frontend Installation
 
